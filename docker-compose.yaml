@@ -13,5 +13,5 @@ services:
     links:
       - db
   db:
-    # build the service 'web' from the folder /db where there is a Dockerfile
+    # build the service 'db' from the folder /db where there is a Dockerfile
     build: ./db
