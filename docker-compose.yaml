@@ -1,0 +1,17 @@
+# whe are using version 3 of docker-compose
+version: "3"
+
+# services to be controlled
+services:
+  web:
+    # build the service 'web' from the folder /web where there is a Dockerfile
+    build: ./web
+    # map the ports
+    ports:
+      - "5000:5000"
+    # specifies the dependencies
+    links:
+      - db
+  db:
+    # build the service 'web' from the folder /db where there is a Dockerfile
+    build: ./db
